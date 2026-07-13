@@ -5,12 +5,10 @@
 ```jsonc
 {
   "plugin": [
-    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git"
+    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.0.2"
   ]
 }
 ```
-
-Pin: `#v2.0.0`
 
 Local:
 

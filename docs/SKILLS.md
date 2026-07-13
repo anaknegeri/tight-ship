@@ -50,6 +50,10 @@ Offer merge / PR / keep / discard after verified completion.
 ### tight-ship
 Size ladder only (skip → reuse → stdlib → … → min code). Used during build, not instead of process skills.
 
+## Examples
+
+- Plan shape: [`examples/sample-plan.md`](../examples/sample-plan.md)
+
 ## Typical flows
 
 **Feature**

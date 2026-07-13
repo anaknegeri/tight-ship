@@ -1,7 +1,7 @@
 # tight-ship
 
-[![smoke](https://img.shields.io/badge/smoke-scripts%2Fsmoke.sh-green)](scripts/smoke.sh)
-[![version](https://img.shields.io/badge/version-2.0.1-blue)](https://github.com/anaknegeri/tight-ship/releases)
+[![smoke](https://github.com/anaknegeri/tight-ship/actions/workflows/smoke.yml/badge.svg)](https://github.com/anaknegeri/tight-ship/actions/workflows/smoke.yml)
+[![version](https://img.shields.io/badge/version-2.0.2-blue)](https://github.com/anaknegeri/tight-ship/blob/main/CHANGELOG.md)
 [![license](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 **Full coding-agent methodology suite** — disciplined process, lean implementation, multi-agent ready.
@@ -13,13 +13,15 @@ Install once. The agent loads skills automatically for design, planning, TDD, de
 ```jsonc
 {
   "plugin": [
-    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.0.1"
+    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.0.2"
   ]
 }
 ```
 
 Restart OpenCode. Ask: **“What tight-ship skills do you have?”**  
 Commands: `/tight-ship-help`, `/tight-ship-status`, `/tight-ship`
+
+Example plan shape: [examples/sample-plan.md](examples/sample-plan.md) · Changes: [CHANGELOG.md](CHANGELOG.md)
 
 ## Skills
 
