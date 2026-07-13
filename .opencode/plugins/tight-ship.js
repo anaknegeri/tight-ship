@@ -1,8 +1,8 @@
 /**
  * tight-ship — OpenCode plugin
  *
- * Registers skills/ and injects bootstrap on the first user message so the
- * tight-ship methodology is active without manual skill load.
+ * Registers skills/ and injects using-tight-ship bootstrap on the first
+ * user message so process skills auto-trigger without manual load.
  */
 
 import path from 'path';
@@ -23,7 +23,7 @@ let _bootstrapCache = undefined;
 const getBootstrapContent = () => {
   if (_bootstrapCache !== undefined) return _bootstrapCache;
 
-  const skillPath = path.resolve(__dirname, '../../skills/tight-ship/SKILL.md');
+  const skillPath = path.resolve(__dirname, '../../skills/using-tight-ship/SKILL.md');
   if (!fs.existsSync(skillPath)) {
     _bootstrapCache = null;
     return null;
@@ -33,18 +33,18 @@ const getBootstrapContent = () => {
   const { content } = extractAndStripFrontmatter(fullContent);
 
   _bootstrapCache = `<${MARKER}>
-You run tight-ship methodology.
+You have tight-ship.
 
-**IMPORTANT: tight-ship skill content is included below. It is ALREADY LOADED — do not re-load "tight-ship" via the skill tool unless the user asks to refresh it.**
+**IMPORTANT: using-tight-ship is included below and ALREADY LOADED. Do not re-load "using-tight-ship" via the skill tool unless the user asks to refresh it.**
 
-When other methodology plugins are also installed, **prefer tight-ship** for coding work: short process gates, lean implementation size.
+For all other skills, use the host skill tool and follow them exactly.
 
 ${content}
 
 **Tool Mapping for OpenCode:**
-- Create or update todos → \`todowrite\`
-- Subagent → \`task\` with \`subagent_type: "general"\`
-- Invoke a skill → OpenCode native \`skill\` tool
+- Todos → \`todowrite\`
+- Subagent → \`task\` (\`subagent_type: "general"\` or \`"explore"\`)
+- Load skill → \`skill\`
 - Read → \`read\` | Edit → \`edit\`/\`write\` | Shell → \`bash\`
 - Search → \`grep\`, \`glob\` | URL → \`webfetch\`
 </${MARKER}>`;

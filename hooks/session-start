@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# SessionStart hook — inject tight-ship for Claude Code / Cursor / Copilot-style harnesses
+# SessionStart hook — inject using-tight-ship bootstrap
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-content=$(cat "${PLUGIN_ROOT}/skills/tight-ship/SKILL.md" 2>&1 || echo "Error reading tight-ship skill")
+content=$(cat "${PLUGIN_ROOT}/skills/using-tight-ship/SKILL.md" 2>&1 || echo "Error reading using-tight-ship")
 
 escape_for_json() {
   local s="$1"
@@ -18,7 +18,7 @@ escape_for_json() {
 }
 
 escaped=$(escape_for_json "$content")
-session_context="<TIGHT_SHIP_ACTIVE>\nYou run tight-ship methodology.\n\n${escaped}\n</TIGHT_SHIP_ACTIVE>"
+session_context="<TIGHT_SHIP_ACTIVE>\nYou have tight-ship.\n\nusing-tight-ship is loaded below. For other skills, use the Skill tool.\n\n${escaped}\n</TIGHT_SHIP_ACTIVE>"
 
 if [ -n "${CURSOR_PLUGIN_ROOT:-}" ]; then
   printf '{\n  "additional_context": "%s"\n}\n' "$session_context" | cat
