@@ -1,14 +1,14 @@
 # Methodology
 
-tight-ship is a **mono-skill methodology**: one document agents follow instead of running full Superpowers and full Ponytail in parallel.
+tight-ship is a **single methodology skill**: one document agents follow for coding work — disciplined process, lean code.
 
 ## Core rule
 
-| Layer | Source | Responsibility |
-|-------|--------|----------------|
-| Process | Superpowers-shaped | When to design, plan, test, verify, finish |
-| Size | Ponytail-shaped | How little code to write |
-| Domain | Your stack skills | Go/React/etc. patterns **after** design/plan |
+| Layer | Responsibility |
+|-------|----------------|
+| Process | When to design, plan, check, verify, finish |
+| Size | How little code to write |
+| Domain | Stack patterns **after** design/plan |
 
 **Precedence:** user instructions → tight-ship → other methodology skills → model default.
 
@@ -20,7 +20,7 @@ Scope → Design (approve) → Plan → Build (check→code→pass) → Debug* �
 
 \* Debug only when something fails; root cause in the shared path.
 
-### 1. Scope (YAGNI)
+### 1. Scope
 
 If the request is speculative or unused, refuse in one line. Best code is code not written.
 
@@ -66,7 +66,7 @@ Diff vs plan. Delete over-engineering. Prefer deletion over addition.
 
 Ask: merge, open PR, or stop.
 
-## Never skip (even when minimal)
+## Never skip (even when lean)
 
 - Validation at trust boundaries  
 - Error handling that prevents data loss  
@@ -86,17 +86,17 @@ Code first. Then at most three short lines: what was skipped, when to add it.
 ## Intentional shortcuts
 
 ```text
-// ponytail: global lock; per-account locks if throughput matters
+// tight-ship: global lock; per-account locks if throughput matters
 ```
 
 Marks deliberate simplicity so the next person does not treat it as ignorance.
 
 ## What tight-ship is not
 
-- Not a full replacement of every Superpowers sub-skill (SDD, visual companion, etc.)  
+- Not endless design ceremony  
 - Not “no process”  
 - Not “no tests” — one meaningful check beats a hollow suite  
-- Not a framework for your app — it only shapes how the **agent** works  
+- Not an application framework — it only shapes how the **agent** works  
 
 ## Agent-facing source of truth
 

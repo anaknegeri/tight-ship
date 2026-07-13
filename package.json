@@ -1,7 +1,7 @@
 {
   "name": "tight-ship",
   "version": "1.0.0",
-  "description": "Superpowers process gates + Ponytail minimal code — one installable agent methodology",
+  "description": "Disciplined process + lean code — installable methodology for coding agents",
   "type": "module",
   "main": ".opencode/plugins/tight-ship.js",
   "exports": {
@@ -20,11 +20,9 @@
     "opencode-plugin",
     "opencode",
     "skills",
-    "superpowers",
-    "ponytail",
-    "yagni",
-    "tdd",
-    "agent-methodology"
+    "agent-methodology",
+    "lean-code",
+    "tdd"
   ],
   "license": "MIT",
   "homepage": "https://github.com/anaknegeri/tight-ship#readme",

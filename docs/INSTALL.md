@@ -42,7 +42,7 @@ Restart OpenCode.
 
 ```bash
 mkdir -p ~/.config/opencode/skills/tight-ship
-curl -fsSL https://raw.githubusercontent.com/anaknegeri/tight-ship/master/skills/tight-ship/SKILL.md \
+curl -fsSL https://raw.githubusercontent.com/anaknegeri/tight-ship/main/skills/tight-ship/SKILL.md \
   -o ~/.config/opencode/skills/tight-ship/SKILL.md
 ```
 
@@ -55,19 +55,18 @@ cp skills/tight-ship/SKILL.md .opencode/skills/tight-ship/
 
 Plugin install is preferred: auto-registers the skill path and injects bootstrap on the first user message.
 
-### Alongside Superpowers + Ponytail
+### With other plugins
 
 ```jsonc
 {
   "plugin": [
-    "superpowers@git+https://github.com/obra/superpowers.git",
-    "@dietrichgebert/ponytail",
     "tight-ship@git+https://github.com/anaknegeri/tight-ship.git"
+    // …other plugins if you want them
   ]
 }
 ```
 
-tight-ship resolves methodology conflicts (see [FAQ](FAQ.md)).
+For coding methodology, prefer tight-ship (see [FAQ](FAQ.md)).
 
 ---
 
@@ -85,7 +84,7 @@ Point Claude skills at:
 ~/.tight-ship/skills
 ```
 
-(Exact config depends on your Claude Code skills setup / marketplace layout.)
+(Exact config depends on your Claude Code skills setup.)
 
 ### Option B — SessionStart hook
 
@@ -94,13 +93,13 @@ git clone https://github.com/anaknegeri/tight-ship.git ~/.tight-ship
 chmod +x ~/.tight-ship/hooks/session-start
 ```
 
-Register `hooks/session-start` as a SessionStart hook in your Claude plugin/hooks config so each session gets `TIGHT_SHIP_ACTIVE` context.
+Register `hooks/session-start` as a SessionStart hook so each session gets `TIGHT_SHIP_ACTIVE` context.
 
 ### Option C — copy skill only
 
 ```bash
 mkdir -p ~/.claude/skills/tight-ship
-curl -fsSL https://raw.githubusercontent.com/anaknegeri/tight-ship/master/skills/tight-ship/SKILL.md \
+curl -fsSL https://raw.githubusercontent.com/anaknegeri/tight-ship/main/skills/tight-ship/SKILL.md \
   -o ~/.claude/skills/tight-ship/SKILL.md
 ```
 
@@ -117,7 +116,7 @@ Skill-only:
 ```bash
 # adjust to your Cursor skills directory
 mkdir -p ~/.cursor/skills/tight-ship
-curl -fsSL https://raw.githubusercontent.com/anaknegeri/tight-ship/master/skills/tight-ship/SKILL.md \
+curl -fsSL https://raw.githubusercontent.com/anaknegeri/tight-ship/main/skills/tight-ship/SKILL.md \
   -o ~/.cursor/skills/tight-ship/SKILL.md
 ```
 
@@ -133,7 +132,7 @@ Minimal agent instruction:
 
 ```text
 Follow the tight-ship skill at skills/tight-ship/SKILL.md for all coding work.
-Process gates from Superpowers shape; code bulk from Ponytail shape.
+Disciplined process gates; lean implementation size.
 ```
 
 ---
@@ -146,8 +145,7 @@ Add:
 ## Methodology
 Primary: **tight-ship** (https://github.com/anaknegeri/tight-ship)
 - Process gates: design → plan → check → verify → finish
-- Code bulk: YAGNI, shortest correct diff
-- When Superpowers and Ponytail both apply, follow tight-ship
+- Code bulk: skip unused work, shortest correct diff
 ```
 
 ---

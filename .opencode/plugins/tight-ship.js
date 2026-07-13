@@ -2,7 +2,7 @@
  * tight-ship — OpenCode plugin
  *
  * Registers skills/ and injects bootstrap on the first user message so the
- * Superpowers×Ponytail mono-methodology is active without manual skill load.
+ * tight-ship methodology is active without manual skill load.
  */
 
 import path from 'path';
@@ -37,7 +37,7 @@ You run tight-ship methodology.
 
 **IMPORTANT: tight-ship skill content is included below. It is ALREADY LOADED — do not re-load "tight-ship" via the skill tool unless the user asks to refresh it.**
 
-When Superpowers and/or Ponytail plugins are also installed, **tight-ship resolves conflicts**: process gates from Superpowers shape, code bulk from Ponytail shape. Prefer this skill over running both full methodologies in parallel.
+When other methodology plugins are also installed, **prefer tight-ship** for coding work: short process gates, lean implementation size.
 
 ${content}
 

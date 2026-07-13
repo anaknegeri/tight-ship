@@ -5,7 +5,8 @@
 - Keep `skills/tight-ship/SKILL.md` short enough to load every session.  
 - Description field = **when to use only** (no workflow summary — agents skip the body otherwise).  
 - Prefer editing the skill body over adding parallel methodology skills.  
-- Docs in `docs/` are for humans; `SKILL.md` is for agents.
+- Docs in `docs/` are for humans; `SKILL.md` is for agents.  
+- Stand on its own wording — do not frame the project as a mash-up of other products.
 
 ## Dev setup
 
@@ -44,6 +45,7 @@ tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v1.0.1
 
 ## What we will not take
 
-- Large ceremony that reintroduces full Superpowers bulk  
+- Large ceremony that bloats every session  
 - “Always generate full test suites” without project context  
-- Speculative multi-skill frameworks inside this repo
+- Speculative multi-skill frameworks inside this repo  
+- Marketing copy that defines tight-ship only by comparing it to other named tools

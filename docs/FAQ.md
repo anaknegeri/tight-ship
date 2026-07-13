@@ -1,31 +1,30 @@
 # FAQ
 
-## Why not just install Superpowers and Ponytail?
+## Why a methodology skill at all?
 
-They optimize different axes. Superpowers pushes process depth; Ponytail pushes code thinness. Agents often:
+Agents under pressure skip unwritten norms. Written gates hold better:
 
-- skip design because Ponytail said YAGNI, or  
-- ship large plans/abstractions because Superpowers said be thorough  
+1. do not code before a shared design  
+2. do not invent frameworks for a 10-line fix  
+3. do not claim “done” without command output  
 
-tight-ship is the **resolution policy**: short process, tiny code, hard verify.
+## Why not only “be thorough” or only “be minimal”?
 
-## Do I need Superpowers or Ponytail installed?
+Those pull opposite ways. Thorough process can bloat plans and abstractions. Minimal code alone can skip design and verification. tight-ship is the **resolution policy**: short process, tiny code, hard verify.
+
+## Do I need other methodology plugins?
 
 No. tight-ship is self-contained.
 
-Optional: keep them for extra skills/tools (parallel agents, ponytail-review, etc.). Methodology conflicts → follow tight-ship.
+Optional: keep other plugins for extra tools. For coding methodology, follow tight-ship.
 
-## Will bootstrap fight Superpowers inject?
+## Will bootstrap collide with other injects?
 
-No. Superpowers uses `EXTREMELY_IMPORTANT`; tight-ship uses `TIGHT_SHIP_ACTIVE`. Both can inject. The skill text tells the agent which methodology wins on conflict.
+tight-ship uses its own marker: `TIGHT_SHIP_ACTIVE`. It does not rely on other plugins’ markers. The skill text tells the agent which methodology wins on conflict.
 
 ## Is design required for a one-line fix?
 
 Yes, but design can be **two sentences** + approve. The gate is approval, not ceremony length.
-
-## How is this different from “just be a senior dev”?
-
-It is explicit, loadable, and **testable as process**: design approve, one check, verify output. Agents under pressure skip unwritten norms; written gates hold better.
 
 ## Can I use this only in one project?
 
@@ -54,12 +53,8 @@ npm publish is optional for non-OpenCode consumers.
 
 ## Who is this for?
 
-Teams and individuals who want agents that:
+Teams and individuals who want agents that ship **small, correct diffs** with **visible process**.
 
-1. do not code before a shared design, and  
-2. do not invent frameworks for a 10-line fix, and  
-3. do not claim “done” without command output  
+## License
 
-## License / attribution
-
-MIT. Inspired by Superpowers and Ponytail; not affiliated with either project.
+MIT. See [LICENSE](../LICENSE).

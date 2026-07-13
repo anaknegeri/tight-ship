@@ -1,15 +1,15 @@
 # tight-ship
 
-**Superpowers process gates + Ponytail minimal code** — one methodology for coding agents.
+**Disciplined process + lean code** — one methodology for coding agents.
 
 Process stays: design → plan → check → verify → finish.  
-Code stays small: YAGNI, reuse, stdlib, shortest correct diff.
+Code stays small: skip unused work, reuse, stdlib, shortest correct diff.
 
-> Process wins on **when**. Ponytail wins on **how much**.
+> Process owns **when**. Lean owns **how much**.
 
-| | Superpowers alone | Ponytail alone | **tight-ship** |
+| | Heavy process only | Code-thin only | **tight-ship** |
 |--|--|--|--|
-| Design before code | Yes (often heavy) | Optional / skip | Yes, **short** |
+| Design before code | Yes (often heavy) | Often skipped | Yes, **short** |
 | Implementation size | Can grow with plan | Minimal | Minimal |
 | “Done” without proof | Discouraged | Easy to skip | **Forbidden** |
 | Speculative abstractions | Sometimes | No | No |
@@ -40,7 +40,7 @@ Pin a version:
 
 More harnesses: [docs/INSTALL.md](docs/INSTALL.md)  
 How it works: [docs/METHODOLOGY.md](docs/METHODOLOGY.md)  
-FAQ / conflicts: [docs/FAQ.md](docs/FAQ.md)
+FAQ: [docs/FAQ.md](docs/FAQ.md)
 
 ## What the agent does
 
@@ -53,22 +53,19 @@ FAQ / conflicts: [docs/FAQ.md](docs/FAQ.md)
 
 Full rules live in [`skills/tight-ship/SKILL.md`](skills/tight-ship/SKILL.md).
 
-## With Superpowers and/or Ponytail
+## With other agent plugins
 
-You can install tight-ship **alongside** [Superpowers](https://github.com/obra/superpowers) and [Ponytail](https://github.com/DietrichGebert/ponytail).
+tight-ship works alone or next to other skills/plugins.
 
-- Bootstrap marker: `TIGHT_SHIP_ACTIVE` (does not collide with Superpowers’ inject)  
-- Agent is told: **prefer tight-ship** when process vs bulk conflict  
+- Bootstrap marker: `TIGHT_SHIP_ACTIVE`  
+- Agent is told: **prefer tight-ship** for methodology on coding work  
 - Domain skills (Go, React, etc.) still apply after design/plan  
-
-To run **only** tight-ship, remove the other methodology plugins from config.
 
 ## Session controls
 
 | Say | Effect |
 |-----|--------|
 | `stop tight-ship` / `normal mode` | Drop this methodology for the session |
-| `stop ponytail` | Independent; only if Ponytail plugin is active |
 
 ## Verify install
 
@@ -111,6 +108,4 @@ MIT — see [LICENSE](LICENSE).
 
 ## Credits
 
-- Process discipline inspired by [obra/superpowers](https://github.com/obra/superpowers)  
-- Minimal-code ladder inspired by [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)  
-- Combined into one installable methodology by [anaknegeri](https://github.com/anaknegeri)
+Maintained by [anaknegeri](https://github.com/anaknegeri).
