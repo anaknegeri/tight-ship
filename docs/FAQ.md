@@ -25,10 +25,10 @@ Load skill `tight-ship` alone, or say `stop tight-ship` / `normal mode` to drop 
 
 ## Versioning
 
-Tags like `v2.0.2`. Pin in OpenCode:
+Tags like `v2.1.0`. Pin in OpenCode:
 
 ```text
-tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.0.2
+tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.1.0
 ```
 
 ## License

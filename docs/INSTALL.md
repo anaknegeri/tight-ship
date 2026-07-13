@@ -5,7 +5,7 @@
 ```jsonc
 {
   "plugin": [
-    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.0.2"
+    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.1.0"
   ]
 }
 ```

@@ -1,0 +1,40 @@
+{
+  "name": "tight-ship",
+  "version": "2.1.0",
+  "description": "Full coding-agent methodology suite: design, plans, TDD, multi-agent tasks, verify, review, and lean code size.",
+  "author": {
+    "name": "anaknegeri",
+    "url": "https://github.com/anaknegeri"
+  },
+  "homepage": "https://github.com/anaknegeri/tight-ship",
+  "repository": "https://github.com/anaknegeri/tight-ship",
+  "license": "MIT",
+  "keywords": [
+    "designing",
+    "planning",
+    "tdd",
+    "debugging",
+    "code-review",
+    "lean-code",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "hooks": {},
+  "interface": {
+    "displayName": "tight-ship",
+    "shortDescription": "Design, plans, TDD, debugging, and delivery workflows for coding agents",
+    "longDescription": "Use tight-ship to guide agent work through design, implementation planning, test-driven development, systematic debugging, parallel execution, code review, and finish-the-branch workflows — with a lean code size ladder throughout.",
+    "developerName": "anaknegeri",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "I'd like to build a feature.",
+      "Let's plan and implement this."
+    ],
+    "websiteURL": "https://github.com/anaknegeri/tight-ship"
+  }
+}

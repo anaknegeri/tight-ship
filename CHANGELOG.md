@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.0] — 2026-07-13
+
+### Added
+- Multi-harness plugin manifests: Claude Code (`.claude-plugin/`), Codex (`.codex-plugin/`), Cursor (`.cursor-plugin/`)
+- Claude Code hooks config (`hooks/hooks.json`) + Cursor hooks config (`hooks/hooks-cursor.json`)
+- Cross-platform hook wrapper (`hooks/run-hook.cmd`)
+- `writing-skills` skill (15 skills total)
+- "Supported harnesses" section in README
+
 ## [2.0.2] — 2026-07-13
 
 ### Added

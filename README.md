@@ -1,7 +1,7 @@
 # tight-ship
 
 [![smoke](https://github.com/anaknegeri/tight-ship/actions/workflows/smoke.yml/badge.svg)](https://github.com/anaknegeri/tight-ship/actions/workflows/smoke.yml)
-[![version](https://img.shields.io/badge/version-2.0.2-blue)](https://github.com/anaknegeri/tight-ship/blob/main/CHANGELOG.md)
+[![version](https://img.shields.io/badge/version-2.1.0-blue)](https://github.com/anaknegeri/tight-ship/blob/main/CHANGELOG.md)
 [![license](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 **Full coding-agent methodology suite** — disciplined process, lean implementation, multi-agent ready.
@@ -13,7 +13,7 @@ Install once. The agent loads skills automatically for design, planning, TDD, de
 ```jsonc
 {
   "plugin": [
-    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.0.2"
+    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.1.0"
   ]
 }
 ```
@@ -22,6 +22,12 @@ Restart OpenCode. Ask: **“What tight-ship skills do you have?”**
 Commands: `/tight-ship-help`, `/tight-ship-status`, `/tight-ship`
 
 Example plan shape: [examples/sample-plan.md](examples/sample-plan.md) · Changes: [CHANGELOG.md](CHANGELOG.md)
+
+## Supported harnesses
+
+OpenCode (native plugin), Claude Code (plugin + SessionStart hook), Cursor (plugin), Codex (plugin).
+
+Install per harness: [docs/INSTALL.md](docs/INSTALL.md)
 
 ## Skills
 
@@ -41,6 +47,7 @@ Example plan shape: [examples/sample-plan.md](examples/sample-plan.md) · Change
 | `receiving-code-review` | Handling review feedback |
 | `using-git-worktrees` | Isolated feature workspace |
 | `finishing-a-development-branch` | Merge / PR / stop |
+| `writing-skills` | Create/edit skills |
 
 ## Pipeline
 

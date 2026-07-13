@@ -45,6 +45,11 @@ Verify feedback; classify; implement with evidence.
 ### finishing-a-development-branch
 Offer merge / PR / keep / discard after verified completion.
 
+## Maintenance
+
+### writing-skills
+Create or edit skills. Description = when-to-use only. TDD for documentation: baseline failure → write → verify.
+
 ## Implementation size
 
 ### tight-ship

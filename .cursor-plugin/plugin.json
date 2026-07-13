@@ -1,0 +1,23 @@
+{
+  "name": "tight-ship",
+  "displayName": "tight-ship",
+  "description": "Full coding-agent methodology suite: design, plans, TDD, debugging, lean code",
+  "version": "2.1.0",
+  "author": {
+    "name": "anaknegeri",
+    "url": "https://github.com/anaknegeri"
+  },
+  "homepage": "https://github.com/anaknegeri/tight-ship",
+  "repository": "https://github.com/anaknegeri/tight-ship",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "tdd",
+    "debugging",
+    "methodology",
+    "lean-code",
+    "workflows"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks-cursor.json"
+}
