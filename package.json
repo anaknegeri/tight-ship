@@ -1,0 +1,41 @@
+{
+  "name": "tight-ship",
+  "version": "1.0.0",
+  "description": "Superpowers process gates + Ponytail minimal code — one installable agent methodology",
+  "type": "module",
+  "main": ".opencode/plugins/tight-ship.js",
+  "exports": {
+    ".": "./.opencode/plugins/tight-ship.js",
+    "./plugin": "./.opencode/plugins/tight-ship.js"
+  },
+  "files": [
+    "skills/",
+    "hooks/",
+    ".opencode/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode-plugin",
+    "opencode",
+    "skills",
+    "superpowers",
+    "ponytail",
+    "yagni",
+    "tdd",
+    "agent-methodology"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/anaknegeri/tight-ship#readme",
+  "bugs": {
+    "url": "https://github.com/anaknegeri/tight-ship/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anaknegeri/tight-ship.git"
+  },
+  "pi": {
+    "skills": ["./skills"]
+  }
+}
