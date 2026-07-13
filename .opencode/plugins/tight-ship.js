@@ -52,8 +52,17 @@ ${content}
   return _bootstrapCache;
 };
 
+const parseCommandFile = (filePath) => {
+  const content = fs.readFileSync(filePath, 'utf8');
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!match) return null;
+  const description = match[1].match(/description:\s*(.+)/)?.[1]?.trim();
+  return { description, template: match[2].trim() };
+};
+
 export const TightShipPlugin = async () => {
   const skillsDir = path.resolve(__dirname, '../../skills');
+  const commandDir = path.join(__dirname, '..', 'command');
 
   return {
     config: async (config) => {
@@ -61,6 +70,17 @@ export const TightShipPlugin = async () => {
       config.skills.paths = config.skills.paths || [];
       if (!config.skills.paths.includes(skillsDir)) {
         config.skills.paths.push(skillsDir);
+      }
+
+      if (!config.command) config.command = {};
+      try {
+        for (const file of fs.readdirSync(commandDir).filter((f) => f.endsWith('.md'))) {
+          const name = path.basename(file, '.md');
+          const parsed = parseCommandFile(path.join(commandDir, file));
+          if (parsed) config.command[name] = parsed;
+        }
+      } catch {
+        /* no commands dir */
       }
     },
 
