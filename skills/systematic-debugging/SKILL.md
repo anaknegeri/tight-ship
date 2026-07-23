@@ -7,6 +7,12 @@ description: Use when encountering any bug, test failure, or unexpected behavior
 
 Find root cause before changing code.
 
+## When not
+
+- Known typo / obvious one-line mistake with the fix already in view.
+- Failure is a missing dependency or config the message names outright.
+- Feature request or refactor — that is `designing`, not a bug.
+
 ## Four phases
 
 1. **Reproduce** — reliable steps; capture failing output.

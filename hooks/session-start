@@ -7,6 +7,8 @@ PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 content=$(cat "${PLUGIN_ROOT}/skills/using-tight-ship/SKILL.md" 2>&1 || echo "Error reading using-tight-ship")
 
+# Fallback escaper — handles the common cases but NOT control chars < 0x20
+# other than \n \r \t, so prefer jq when available.
 escape_for_json() {
   local s="$1"
   s="${s//\\/\\\\}"
@@ -17,7 +19,16 @@ escape_for_json() {
   printf '%s' "$s"
 }
 
-escaped=$(escape_for_json "$content")
+# jq -Rs emits a fully-escaped JSON string literal (quotes included); strip the
+# surrounding quotes so it slots into the template below. Bulletproof against
+# control chars and unicode; fall back to the hand-rolled escaper if jq absent.
+if command -v jq >/dev/null 2>&1; then
+  escaped=$(printf '%s' "$content" | jq -Rs '.')
+  escaped=${escaped#\"}
+  escaped=${escaped%\"}
+else
+  escaped=$(escape_for_json "$content")
+fi
 session_context="<TIGHT_SHIP_ACTIVE>\nYou have tight-ship.\n\nusing-tight-ship is loaded below. For other skills, use the Skill tool.\n\n${escaped}\n</TIGHT_SHIP_ACTIVE>"
 
 if [ -n "${CURSOR_PLUGIN_ROOT:-}" ]; then
