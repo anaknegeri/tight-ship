@@ -17,7 +17,7 @@ Turn ideas into a short, approved design before implementation.
 2. **Questions** — one at a time; prefer multiple choice; purpose, constraints, success.
 3. **Approaches** — 2–3 options with trade-offs; lead with recommendation (skip if truly one obvious path).
 4. **Design** — present in short sections; get approval (section-by-section if large).
-5. **Write** — save to `docs/tight-ship/specs/YYYY-MM-DD-<topic>-design.md` when non-trivial; skip file for tiny fixes if user agrees.
+5. **Write** — save to `docs/tight-ship/specs/YYYY-MM-DD-<topic>-design.md` when non-trivial; skip file for tiny fixes if user agrees. If the repo shouldn't track process docs, gitignore `docs/tight-ship/` (ask once).
 6. **Self-check** — no TBD, no contradictions, scoped to one plan.
 7. **Next** — invoke `writing-plans` (only next process skill).
 

@@ -24,6 +24,9 @@ Per-task implement → check → review loop; supports subagents.
 ### dispatching-parallel-agents
 Concurrent packages when tasks do not share files/state.
 
+### condition-based-waiting
+Poll a real async condition with a bounded timeout instead of a fixed `sleep`.
+
 ### test-driven-development
 RED-GREEN-REFACTOR; delete code written before a failing check.
 

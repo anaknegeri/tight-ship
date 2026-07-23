@@ -9,7 +9,7 @@ Produce a thin, executable plan a junior agent can follow without inventing scop
 
 ## Output
 
-Save to `docs/tight-ship/plans/YYYY-MM-DD-<feature>.md` when non-trivial.
+Save to `docs/tight-ship/plans/YYYY-MM-DD-<feature>.md` when non-trivial. Gitignore `docs/tight-ship/` if the repo shouldn't track process docs.
 
 Structure:
 
