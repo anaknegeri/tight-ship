@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0] — 2026-07-24
+
+### Added
+- `condition-based-waiting` skill — poll a real async condition with a bounded timeout instead of a fixed `sleep` (16 skills total)
+- Dormancy clause in `using-tight-ship`: trivial / claim-free turns skip the skill-check ceremony
+- Claude Code `tight-ship:` Skill-tool prefix documented in `using-tight-ship`
+- "When not" section in `systematic-debugging`
+
+### Changed
+- `hooks/session-start` escapes injected content with `jq -Rs` (robust for control chars / unicode); hand-rolled escaper kept as fallback
+- `designing` / `writing-plans` note gitignoring `docs/tight-ship/` when a repo shouldn't track process docs
+
 ## [2.1.0] — 2026-07-13
 
 ### Added

@@ -1,6 +1,6 @@
 {
   "name": "tight-ship",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Full coding-agent methodology suite: design, plans, TDD, multi-agent tasks, verify, review, lean size",
   "type": "module",
   "main": ".opencode/plugins/tight-ship.js",

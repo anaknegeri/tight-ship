@@ -1,7 +1,7 @@
 # tight-ship
 
 [![smoke](https://github.com/anaknegeri/tight-ship/actions/workflows/smoke.yml/badge.svg)](https://github.com/anaknegeri/tight-ship/actions/workflows/smoke.yml)
-[![version](https://img.shields.io/badge/version-2.1.0-blue)](https://github.com/anaknegeri/tight-ship/blob/main/CHANGELOG.md)
+[![version](https://img.shields.io/badge/version-2.2.0-blue)](https://github.com/anaknegeri/tight-ship/blob/main/CHANGELOG.md)
 [![license](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 **Full coding-agent methodology suite** — disciplined process, lean implementation, multi-agent ready.
@@ -13,7 +13,7 @@ Install once. The agent loads skills automatically for design, planning, TDD, de
 ```jsonc
 {
   "plugin": [
-    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.1.0"
+    "tight-ship@git+https://github.com/anaknegeri/tight-ship.git#v2.2.0"
   ]
 }
 ```
